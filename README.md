@@ -27,18 +27,17 @@ Before we start, feel free to look into [Stephen Gallagher's](https://github.com
 
 ## 1-minute-intro
 
- * decouple component version from an [OS release](https://docs.pagure.org/modularity/)
- * provide a solution for component maintainers to supply more versions of one component
- * lifecycles and support level can vary between modules
- * module authors to define how the module is meant to be built and utilized by users
+Modularity cuts Linux distributions into pieces, giving them independent lifecycles, and making them available in multiple versions. Giving more options of choice to users, and flexibility and control to packagers.
 
+![modularity-basics](/img/modularity-basics-1.png)
+
+See the official [Fedora Modularity documentation](https://docs.pagure.org/modularity/) for more information
 
 ## modulemd
 
-Modulemd stands for two things:
+Modules are defined in a [modulemd](https://pagure.io/modulemd) file.
 
- 1. a specification
- 2. a library
+As opposed to traditional distributions, where all packages are built and shipped in a single monolythic release, Modularity needs a mechanism of defining which package goes to which module. And that's modulemd.
 
 
 ### The specification
