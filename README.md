@@ -27,11 +27,11 @@ Before we start, feel free to look into [Stephen Gallagher's](https://github.com
 
 ## 1-minute-intro
 
-Modularity cuts Linux distributions into pieces, giving them independent lifecycles, and making them available in multiple versions. Giving more options of choice to users, and flexibility and control to packagers.
+Modularity cuts Linux distributions into **modules**, giving them **independent lifecycles**, and making them available in **multiple streams**. Giving more options of choice to users, and flexibility and control to packagers.
 
 ![modularity-basics](/img/modularity-basics-1.png)
 
-See the official [Fedora Modularity documentation](https://docs.pagure.org/modularity/) for more information
+See the **official [Fedora Modularity documentation](https://docs.pagure.org/modularity/)** for more information
 
 ## modulemd
 
