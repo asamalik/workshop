@@ -29,7 +29,7 @@ Before we start, feel free to look into [Stephen Gallagher's](https://github.com
 
 Modularity cuts Linux distributions into **modules**, giving them **independent lifecycles**, and making them available in **multiple streams**. Giving more options of choice to users, and flexibility and control to packagers.
 
-![modularity-basics](/img/modularity-basics-1.png)
+<img src="/img/modularity-basics-1.png" width=600px>
 
 See the **official [Fedora Modularity documentation](https://docs.pagure.org/modularity/)** for more information
 
@@ -42,6 +42,23 @@ As opposed to traditional distributions, where all packages are built and shippe
 Have a look at a real example of [nodejs module](http://pkgs.fedoraproject.org/cgit/modules/nodejs.git/tree/nodejs.yaml?h=f26).
 
 ## Workflow
+
+All modules will use a [platform module](http://pkgs.fedoraproject.org/cgit/modules/platform.git/tree/platform.yaml) as a build and runtme dependency. Platform is the base system and common, shared userland.
+
+To create a module, you need to define a **top-level package set** representing your module, and **resolve missing dependencies** between your package set and the platform module. A simple example:
+
+<img src="/img/defining-modules-1-simple.png" width=600px>
+
+### More complex module
+
+Unfortunatelly, it's not easy every time. Many packages will have **complex dependencies** that will need to get **split into multiple modules**. An example:
+
+<img src="/img/defining-modules-2-complex-bad.png" width=600px>
+
+<img src="/img/defining-modules-2-complex-good.png" width=600px>
+
+At the **beginning of development of the F27 Server**, all of these modules will need to get indentified and built. However, when we are done with the initial set, packagers will be able to use what's already available.
+
 
 [Guide](https://docs.pagure.org/modularity/development/building-modules.html)
 
