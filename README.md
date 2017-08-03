@@ -55,11 +55,11 @@ Unfortunatelly, it's not easy every time. Many packages will have **complex depe
 
 <img src="/img/defining-modules-2-complex-bad.png" width=600px>
 
-As you might have guessed, bundling all dependencies is not the right thing to do in this example. Instead, we need to identify **other modules**, and use these as dependencies:
+As you might have guessed, **bundling all dependencies is not the right thing to do** in this example. Instead, we need to identify **other modules**, and use these as dependencies. Some packages might also become part of the platform module. 
 
 <img src="/img/defining-modules-2-complex-good.png" width=600px>
 
-At the **beginning of development of the F27 Server**, all of these modules will need to get indentified and built. However, when we are done with the initial set, packagers will be able to use what's already available.
+At the **beginning of development of the F27 Server**, all of these modules will need to get indentified and built. However, when we are done with the initial set, packagers will be able to use what's already available which will make creating additional modules significantly easier.
 
 
 [Guide](https://docs.pagure.org/modularity/development/building-modules.html)
