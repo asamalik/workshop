@@ -37,37 +37,9 @@ See the **official [Fedora Modularity documentation](https://docs.pagure.org/mod
 
 Modules are defined in a [modulemd](https://pagure.io/modulemd) file.
 
-As opposed to traditional distributions, where all packages are built and shipped in a single monolythic release, Modularity needs a mechanism of defining which package goes to which module. And that's modulemd.
+As opposed to traditional distributions, where all packages are built and shipped in a single monolythic release, Modularity needs a mechanism of defining which package goes into what module. And that's modulemd.
 
-
-### The specification
-
-The modulemd file allows you to describe your module:
- * module description
- * licensing
- * build-time and runtime dependencies
- * module API
- * module components and artifacts
-
-Modulemd is agnostic of packaging formats (at the same time, it's implemnted for RPM only now).
-
- * [the specification](https://pagure.io/modulemd/blob/master/f/spec.yaml)
- * [a real example](http://pkgs.fedoraproject.org/cgit/modules/nodejs.git/tree/nodejs.yaml?h=f26)
- * [list of existing modules](http://pkgs.fedoraproject.org/cgit/modules)
- * interesting modules:
-   * platform module
-     * TODO: link; platform should have builds available during first week of August, 2017
-     * is still a work in-progress
-   * base-runtime
-   * shared-userspace
-   * common-build-dependencies
-   * common-build-dependencies-bootstrap
- * runtime dependencies
- * build-time dependencies
- * module components
- * filtering
- * API
-
+Have a look at a real example of [nodejs module](http://pkgs.fedoraproject.org/cgit/modules/nodejs.git/tree/nodejs.yaml?h=f26).
 
 ## Workflow
 
